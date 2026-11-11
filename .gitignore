@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+creds.json
+**/creds.json
+static/audio/*
+!static/audio/.gitkeep
+.pytest_cache/
+.DS_Store
+*.egg-info/
+dist/
+build/

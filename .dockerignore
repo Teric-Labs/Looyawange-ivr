@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+.pytest_cache/
+.env
+.git/
+.gitignore
+*.md
+.DS_Store
+tests/
+.pytest_cache/
+static/audio/*
+!static/audio/.gitkeep
+*.egg-info/
+dist/
+build/

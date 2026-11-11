@@ -1,0 +1,26 @@
+# Optional Blueprint — create a Web Service on Render from this repo folder.
+# Dashboard: New → Web Service → Docker image bateesa/looyawange-ivr:latest
+services:
+  - type: web
+    name: looyawange-ivr
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: AT_ENV
+        value: sandbox
+      - key: AT_USERNAME
+        value: sandbox
+      - key: AT_API_KEY
+        sync: false
+      - key: AT_VOICE_NUMBER
+        sync: false
+      # Same agent URL the web uses (knowledge + ASR + TTS)
+      - key: WAKILIBOT_AGENT_URL
+        value: https://wakilibot-agent-0wm0.onrender.com
+      - key: IVR_DEFAULT_LANGUAGE
+        value: en
+      - key: IVR_PUBLIC_BASE_URL
+        value: https://looyawange-ivr.onrender.com
